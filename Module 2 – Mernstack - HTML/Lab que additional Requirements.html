@@ -1,0 +1,39 @@
+<!-- Use appropriate form validation using required, minlength, maxlength, and 
+pattern Link form labels with their corresponding inputs using the for attribute.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form action="/submit" method="POST">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required minlength="5" maxlength="15" pattern="[A-Za-z0-9]+" title="Only letters and numbers allowed" placeholder="Enter your username">
+        </div>
+        
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="8" placeholder="Enter your password">
+        </div>
+
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required pattern="^\+?\d{0,13}" title="Phone number should contain only numbers, and can start with a '+' sign" placeholder="Enter your phone number">
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
